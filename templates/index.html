@@ -37,6 +37,19 @@
 
                     </div>
 
+                     <div class="form-group">
+                        <input type="number" class="form-control" placeholder="Phone Number" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Country" name="country" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="City" name="city" required>
+                    </div>
+
+
 
                     <div class="form-group mt-2">
                         <select id="gender" name="gender" class="form-control" required>
@@ -59,7 +72,10 @@
              <tr>
                  <th>Name</th>
                  <th>Email</th>
+                 <th>Phone</th>
                  <th>Age</th>
+                 <th>Country</th>
+                 <th>City</th>
                  <th>Gender</th>
                  <th>Action</th>
              </tr>
@@ -72,9 +88,11 @@
                  <tr>
                  <th>{{ d.name }}</th>
                  <th>{{ d.email }}</th>
+                 <th>{{ d.phone }}</th>
                  <th>{{ d.age }}</th>
+                 <th>{{ d.country }}</th>
+                 <th>{{ d.city }}</th>
                  <th>{{ d.gender }}</th>
-
                  <th>
                      <button>
                          <a href="/delete/{{ d.id }}">Delete</a>

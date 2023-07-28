@@ -1,0 +1,15 @@
+1.Edit html file
+2.Edit model and add field
+3.Make migrations and then migrate
+4.Go to views and add field to request and query
+5.Go to your html file and add new field to your table
+6.For update and delete,go to edit html file and add new fields e.g phone,country,city
+
+---Assignment---
+#Add two fields:
+which country are you from
+which city are you from
+
+---Display the two fields---
+---update and delete
+

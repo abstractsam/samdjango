@@ -23,6 +23,9 @@ def updateData(request, id):
     if request.method == "POST":
         name = request.POST.get('name')
         email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        country = request.POST.get('country')
+        city = request.POST.get('city')
         age = request.POST.get('age')
         gender = request.POST.get('gender')
 
@@ -30,6 +33,9 @@ def updateData(request, id):
         edit_data.name = name
         edit_data.email = email
         edit_data.age = age
+        edit_data.phone = phone
+        edit_data.country = country
+        edit_data.city = city
         edit_data.gender = gender
         edit_data.save()
 
@@ -44,10 +50,13 @@ def insertData(request):
     if request.method == "POST":
         name = request.POST.get('name')
         email = request.POST.get('email')
+        phone = request.POST.get('phone')
         age = request.POST.get('age')
+        country = request.POST.get('country')
+        city = request.POST.get('city')
         gender = request.POST.get('gender')
 
-        query = People.objects.create(name=name, email=email, age=age, gender=gender)
+        query = People.objects.create(name=name, email=email, country=country, city=city, phone=phone, age=age, gender=gender)
         query.save()
         return redirect("/")
     return render(request, "index.html")
